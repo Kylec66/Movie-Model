@@ -1794,7 +1794,7 @@
 3042,Ed,PG,Comedy,1996,"March 15, 1996 (United States)",2.7,8200,Bill Couturié,Ken Richards,Matt LeBlanc,United States,24000000,4422380,Longview Entertainment,94
 3043,The Game,R,Drama,1997,"September 12, 1997 (United States)",7.8,361000,David Fincher,John Brancato,Michael Douglas,United States,50000000,109423648,Polygram Filmed Entertainment,129
 3044,Boogie Nights,R,Drama,1997,"October 31, 1997 (United States)",7.9,246000,Paul Thomas Anderson,Paul Thomas Anderson,Mark Wahlberg,United States,15000000,43101594,New Line Cinema,155
-3045,Titanic,PG-13,Drama,1997,"December 19, 1997 (United States)",7.8,1100000,James Cameron,James Cameron,Leonardo DiCaprio,United States,200000000,2201647264,Twentieth Century Fox,194
+3045,Titanic,PG-13,Drama,1997,"December 19, 1997 (United States)",7.8,1100000,James Cameron,James Cameron,Leonardo DiCaprio,United States,200000000,-2147483648,Twentieth Century Fox,194
 3046,The Fifth Element,PG-13,Action,1997,"May 9, 1997 (United States)",7.7,444000,Luc Besson,Luc Besson,Bruce Willis,France,93000000,263920180,Columbia Pictures,126
 3047,Austin Powers: International Man of Mystery,PG-13,Adventure,1997,"May 2, 1997 (United States)",7.0,227000,Jay Roach,Mike Myers,Mike Myers,United States,16500000,67683989,Capella International,89
 3048,Lolita,R,Drama,1997,"September 25, 1998 (United States)",6.9,54000,Adrian Lyne,Vladimir Nabokov,Jeremy Irons,France,62000000,1071255,Guild,137
@@ -3730,7 +3730,7 @@
 5442,Surveillance,R,Crime,2008,"July 31, 2008 (Germany)",6.3,17000,Jennifer Lynch,Kent Harper,Julia Ormond,United States,3500000,1138322,Lago Film,97
 5443,Inglourious Basterds,R,Adventure,2009,"August 21, 2009 (United States)",8.3,1300000,Quentin Tarantino,Quentin Tarantino,Brad Pitt,United States,70000000,321457747,Universal Pictures,153
 5444,Star Trek,PG-13,Action,2009,"May 8, 2009 (United States)",7.9,585000,J.J. Abrams,Roberto Orci,Chris Pine,United States,150000000,385680446,Paramount Pictures,127
-5445,Avatar,PG-13,Action,2009,"December 18, 2009 (United States)",7.8,1100000,James Cameron,James Cameron,Sam Worthington,United States,237000000,2847246203,Twentieth Century Fox,162
+5445,Avatar,PG-13,Action,2009,"December 18, 2009 (United States)",7.8,1100000,James Cameron,James Cameron,Sam Worthington,United States,237000000,-2147483648,Twentieth Century Fox,162
 5446,Jennifer's Body,R,Comedy,2009,"September 18, 2009 (United States)",5.3,121000,Karyn Kusama,Diablo Cody,Megan Fox,United States,16000000,31556061,Fox Atomic,102
 5447,Watchmen,R,Action,2009,"March 6, 2009 (United States)",7.6,520000,Zack Snyder,David Hayter,Jackie Earle Haley,United States,130000000,185382813,Warner Bros.,162
 5448,Fast & Furious,PG-13,Action,2009,"April 3, 2009 (United States)",6.6,271000,Justin Lin,Chris Morgan,Vin Diesel,United States,85000000,360366870,Universal Pictures,107
@@ -5301,7 +5301,7 @@
 7439,Nobody's Fool,R,Comedy,2018,"November 2, 2018 (United States)",4.9,7000,Tyler Perry,Tyler Perry,Tiffany Haddish,United States,19000000,33705333,BET Films,110
 7443,Midsommar,R,Drama,2019,"July 3, 2019 (United States)",7.1,232000,Ari Aster,Ari Aster,Florence Pugh,United States,9000000,47967636,A24,148
 7444,Once Upon a Time... In Hollywood,R,Comedy,2019,"July 26, 2019 (United States)",7.6,603000,Quentin Tarantino,Quentin Tarantino,Leonardo DiCaprio,United States,90000000,374565754,Columbia Pictures,161
-7445,Avengers: Endgame,PG-13,Action,2019,"April 26, 2019 (United States)",8.4,903000,Anthony Russo,Christopher Markus,Robert Downey Jr.,United States,356000000,2797501328,Marvel Studios,181
+7445,Avengers: Endgame,PG-13,Action,2019,"April 26, 2019 (United States)",8.4,903000,Anthony Russo,Christopher Markus,Robert Downey Jr.,United States,356000000,-2147483648,Marvel Studios,181
 7446,Fighting with My Family,PG-13,Biography,2019,"February 22, 2019 (United States)",7.1,71000,Stephen Merchant,Stephen Merchant,Dwayne Johnson,United Kingdom,11000000,40811919,Metro-Goldwyn-Mayer (MGM),108
 7447,Little Women,PG,Drama,2019,"December 25, 2019 (United States)",7.8,159000,Greta Gerwig,Greta Gerwig,Saoirse Ronan,United States,40000000,216601214,Columbia Pictures,135
 7448,Escape Room,PG-13,Action,2019,"January 4, 2019 (United States)",6.4,97000,Adam Robitel,Bragi F. Schut,Taylor Russell,United States,9000000,155712077,Columbia Pictures,99
