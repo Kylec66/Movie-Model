@@ -79,7 +79,7 @@ def model():
         X_list.apped(0)
     if genre == "Comedy":
         X_list.append(1)
-   else:
+    else:
        X_list.append(0)
     if genre == "Crime":
         X_list.append(1)
@@ -89,7 +89,7 @@ def model():
         X_list.append(1)
     else:
         X_list.append(0)
-    if genre = "Horror":
+    if genre == "Horror":
         X_list.append(1)
     else:
         X_list.append(0)
@@ -111,14 +111,15 @@ def model():
         X_list.append(1)
     else:
         X_list.append(0)
-    if writer ="Stephen King":
+    if writer =="Stephen King":
         X_list.append(1)
     else:
+        X-list.append(0)
     if writer == "Wes Craven":
         X_list.append(1)
     else:
         X_list.append(0)
-    if writer = "Woody Allen":
+    if writer == "Woody Allen":
         X_list.append(1)
     else:
         X_list.append(0)
@@ -184,7 +185,7 @@ def model():
         X_list.append(1)
     else:
         X_list.append(0)
-    if star == "Robert De Niro"
+    if star == "Robert De Niro":
         X_list.append(1)
     else:
         X_list.append(0)
@@ -257,7 +258,7 @@ def model():
         X_list.append(0)
     if company == "TriStar Pictures":
         X_list.append(1)
-    else
+    else:
         X_list.append(0)
     if company == "Twentieth Century Fox":
         X_list.append(1)
@@ -285,6 +286,11 @@ def model():
     X = [X_list]
 
     print(X)
+
+    filename = './model/movies_model.sav'
+    loaded_model = pickle.load(open(filename, 'rb'))
+
+    prediction = loaded_model.predict(X)[0][0]
 
     return render_template("index.html", prediction = prediction)
 
