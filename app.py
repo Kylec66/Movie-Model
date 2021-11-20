@@ -153,7 +153,7 @@ def model():
         X_list.append(1)
     else:
         X_list.append(0)
-    if star == "JohnTravolta":
+    if star == "John Travolta":
         X_list.append(1)
     else:
         X_list.append(0)
