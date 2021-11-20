@@ -26,7 +26,7 @@ Base.prepare(engine, reflect=True)
 
 print(Base.classes.keys())
 
-Movies = Base.classes.movies_model
+Movies = Base.classes.movies
 
 ###########################
 #   Flask Setup
