@@ -12,7 +12,7 @@ from flask import (
 
 # Create Engine
 
-engine = create_engine("sqlite:///movies.sqlite")
+engine = create_engine("sqlite:///movies_model.sqlite")
 
 # Creating new mdoel from Database
 
@@ -26,7 +26,7 @@ Base.prepare(engine, reflect=True)
 
 print(Base.classes.keys())
 
-Movies = Base.classes.movies
+Movies = Base.classes.movies_model
 
 ###########################
 #   Flask Setup
