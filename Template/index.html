@@ -57,39 +57,131 @@
             <!-- Experience-->
             <section class="resume-section" id="experience">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Model</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Senior Web Developer</h3>
-                            <div class="subheading mb-3">Intelitec Solutions</div>
-                            <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                    <h2 class="mb-5">Movie Gross Earnings Predictor</h2>
+                    <div class="container">
+                        <hr>
+                    
+                        <div class="row" >
+                          <div class="col-md-6">
+                    
+                            <form method="POST" action="/model" role="form", name="model">
+                    
+                              <label for="genre">Genre:</label>
+                              <br>
+                      
+                              <select name="genre" id="genre">
+                                <option value="Action">Action</option>
+                                <option value="Adventure">Adventure</option>
+                                <option value="Animation">Animation</option>
+                                <option value="Biography">Biography</option>
+                                <option value="Comedy">Comedy</option>
+                                <option value="Crime">Crime</option>
+                                <option value="Drama">Drama</option>
+                                <option value="Horror">Horror</option>
+                                <option value="Horror">Other</option>
+                              </select>     
+                              
+                              <br><br>
+                    
+                              <label for="writer">Top Writers:</label>
+                              <br>
+                    
+                              <select name="writer" id="writer">
+                                <option value="Joel Coen">Joel Coen</option>
+                                <option value="John Hughes">John Hughes</option>
+                                <option value="Luc Besson">Luc Besson</option>
+                                <option value="Stephen King">Stephen King</option>
+                                <option value="Wes Craven">Wes Craven</option>
+                                <option value="Woody Allen">Woody Allen</option>
+                                <option value="Other">Other</option>
+                              </select>     
+                              
+                              <br><br>
+
+                              <label for="star">Top Stars:</label>
+                              <br>
+                    
+                              <select name="star" id="star">
+                                <option value="Adam Sandler">Adam Sandler</option>
+                                <option value="Arnold Schwarzenegger">Arnold Schwarzenegger</option>
+                                <option value="Bruce Willis">Bruce Willis</option>
+                                <option value="Denzel Washington">Denzel Washington</option>
+                                <option value="Eddie Murphy">Eddie Murphy</option>
+                                <option value="Harrison Ford">Harrison Ford</option>
+                                <option value="John Travolta">John Travolta</option>
+                                <option value="Johnny Depp">Johnny Depp</option>
+                                <option value="Keanu Reeves">Keanu Reeves</option>
+                                <option value="Kevin Costner">Kevin Costner</option>
+                                <option value="Matt Damon">Matt Damon</option>
+                                <option value="Matthew McConaughey">Matthew McConaughey</option>
+                                <option value="Mel Gibson">Mel Gibson</option>
+                                <option value="Nicolas Cage">Nicolas Cage</option>
+                                <option value="Robert De Niro">Robert De Niro</option>
+                                <option value="Sylvester Stallone">Sylvester Stallone</option>
+                                <option value="Tom Cruise">Tom Cruise</option>
+                                <option value="Tom Hanks">Tom Hanks</option>
+                                <option value="Other">Other</option>
+                                
+                              </select>     
+                              
+                              <br><br> 
+
+                              <label for="company">Top Companies:</label>
+                              <br>
+                    
+                              <select name="company" id="company">
+                                <option value="Columbia Pictures">Columbia Pictures</option>
+                                <option value="Dimension Films">Dimension Films</option>
+                                <option value="Dreamworks Pictures">Dreamworks Pictures</option>
+                                <option value="Fox 2000 Pictures">Fox 2000 Pictures</option>
+                                <option value="Lionsgate">Lionsgate</option>
+                                <option value="Metro-Goldwyn-Mayer(MGM)">Metro-Goldwyn-Mayer(MGM)</option>
+                                <option value="Miramax">Miramax</option>
+                                <option value="New Line Cinema">New Line Cinema</option>
+                                <option value="Paramount Pictures">Paramount Pictures</option>
+                                <option value="Screen Gems">Screen Gems</option>
+                                <option value="Summit Entertainment">Summit Entertainment</option>
+                                <option value="Touchstone Pictures">Touchstone Pictures</option>
+                                <option value="TriStar Pictures">TriStar Pictures</option>
+                                <option value="Twentieth Century Fox">Twentieth Century Fox</option>
+                                <option value="Universal Pictures">Universal Pictures</option>
+                                <option value="Walt Disney Pictures">Walt Disney Pictures</option>
+                                <option value="Warner Bros">Warner Bros</option>
+                                <option value="Other">Other</option>
+                                
+                              </select>     
+                              
+                              <br><br> 
+                    
+                              <div class="form-group">
+                                  <label for="inputName">Budget</label>
+                                  <input type="text" class="form-control" id="inputBudget" name="budget" placeholder="$21,800,000">
+                              </div>
+                              <br>
+                              <div class="form-group">
+                                  <label for="inputLat">Runtime (min)</label>
+                                  <input type="text" class="form-control" id="inputRuntime" name="runtime" placeholder="105">
+                              </div>
+                              <br>
+                              <input type="submit" value="Submit" class="btn btn-primary">
+                    
+                            </form>
+                    
+                          </div>
+                    
+                          <div class="col-md-6">
+                    
+                            {% if prediction %} 
+                              <div class="prediction">
+                                Gross Movie Earnings: {{prediction}}
+                              </div>
+                            {% endif %}
+                    
+                          </div>
+                    
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">March 2013 - Present</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Web Developer</h3>
-                            <div class="subheading mb-3">Intelitec Solutions</div>
-                            <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">December 2011 - March 2013</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Junior Web Designer</h3>
-                            <div class="subheading mb-3">Shout! Media Productions</div>
-                            <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">July 2010 - December 2011</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Web Design Intern</h3>
-                            <div class="subheading mb-3">Shout! Media Productions</div>
-                            <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">September 2008 - June 2010</span></div>
-                    </div>
+                      </div>
+                
                 </div>
             </section>
             <hr class="m-0" />
