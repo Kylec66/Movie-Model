@@ -1,13 +1,16 @@
 # Imports
 import os
 from sqlalchemy.orm import Session
-from sqlalchemy import create_engine, inspect
+from sqlalchemy import create_engine, inspect, func, or_
 from sqlalchemy.ext.automap import automap_base
+
+import pickle
 
 from flask import (
     Flask,
     render_template,
     jsonify,
+    request,
     redirect)
 
 # Create Engine
@@ -41,23 +44,24 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
-@app.route("/", methods=["POST"])
+@app.route("/model", methods=["POST"])
 def model():
     
+    X_list = []
 
     score = 7.5
-    X_list = []
     X_list.append(score)
 
     budget = request.form["budget"]
     if budget =="":
         budget == 21800000 # Median Budget for Movie
+     #budget = float(budget)
     X_list.append(budget)
     
     runtime = request.form["runtime"]
-    if run_time == "":
-        run_time == 105 # Median Run Time
-        runtime = float(runtime)
+    if runtime == "":
+        runtime == 105 # Median Run Time
+     # runtime = float(budget)
     X_list.append(runtime)
 
     genre = request.form["genre"]
@@ -76,7 +80,7 @@ def model():
     if genre == "Biography":
         X_list.append(1)
     else:
-        X_list.apped(0)
+        X_list.append(0)
     if genre == "Comedy":
         X_list.append(1)
     else:
@@ -114,7 +118,7 @@ def model():
     if writer =="Stephen King":
         X_list.append(1)
     else:
-        X-list.append(0)
+        X_list.append(0)
     if writer == "Wes Craven":
         X_list.append(1)
     else:
@@ -291,6 +295,12 @@ def model():
     loaded_model = pickle.load(open(filename, 'rb'))
 
     prediction = loaded_model.predict(X)[0][0]
+
+    prediction = float(prediction)
+
+    prediction = "${0:,.2f}".format(prediction)
+
+    print(prediction)
 
     return render_template("index.html", prediction = prediction)
 
