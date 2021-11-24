@@ -20,7 +20,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
                 <span class="d-block d-lg-none">Movie</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="..\Static\assets\img\movie.jpg" alt="..." /></span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{{ url_for('static', filename= '/assets/img/movie.jpg') }}"></span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -155,7 +155,7 @@
                     
                               <div class="form-group">
                                   <label for="inputName">Budget</label>
-                                  <input type="text" class="form-control" id="inputBudget" name="budget" placeholder="21800000">
+                                  <input type="text" class="form-control" id="inputBudget" name="budget" placeholder="$21,800,000">
                               </div>
                               <br>
                               <div class="form-group">
@@ -170,13 +170,13 @@
                           </div>
                     
                           <div class="col-md-6">
-                    
+                            <h2>
                             {% if prediction %} 
                               <div class="prediction">
                                 Estimated Gross Earnings: {{prediction}}
                               </div>
                             {% endif %}
-                    
+                            </h2>
                           </div>
                     
                         </div>

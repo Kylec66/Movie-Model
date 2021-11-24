@@ -35,7 +35,7 @@ Movies = Base.classes.movies
 #   Flask Setup
 ###########################
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path = '/static')
 
 
 # Flask Website and Pages
