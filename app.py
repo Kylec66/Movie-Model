@@ -54,15 +54,17 @@ def model():
 
     budget = request.form["budget"]
     if budget =="":
-        budget == 21800000 # Median Budget for Movie
+        budget = 21800000 # Median Budget for Movie
      #budget = float(budget)
-    X_list.append(budget)
+
+    print(budget)
+    X_list.append(float(budget))
     
     runtime = request.form["runtime"]
     if runtime == "":
-        runtime == 105 # Median Run Time
+        runtime = 105 # Median Run Time
      # runtime = float(budget)
-    X_list.append(runtime)
+    X_list.append(float(runtime))
 
     genre = request.form["genre"]
     if genre == "Action":
@@ -294,7 +296,9 @@ def model():
     filename = './model/movies_model.sav'
     loaded_model = pickle.load(open(filename, 'rb'))
 
-    prediction = loaded_model.predict(X)[0][0]
+    print(X)
+
+    prediction = loaded_model.predict(X)
 
     prediction = float(prediction)
 
