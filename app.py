@@ -293,7 +293,7 @@ def model():
 
     print(X)
 
-    filename = './model/movies_model.sav'
+    filename = './Model/movies_model.sav'
     loaded_model = pickle.load(open(filename, 'rb'))
 
     print(X)
